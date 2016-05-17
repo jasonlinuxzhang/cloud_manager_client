@@ -13,8 +13,23 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        widget.cpp
+        widget.cpp \
+    detail.cpp \
+    definedetail.cpp \
+    myinterface.cpp \
+    mythread.cpp
 
-HEADERS  += widget.h
+HEADERS  += widget.h \
+    detail.h \
+    definedetail.h \
+    myinterface.h \
+    common.h \
+    mythread.h
 
-FORMS    += widget.ui
+FORMS    += widget.ui \
+    detail.ui \
+    definedetail.ui
+
+RESOURCES += \
+    image.qrc
+QT += network
