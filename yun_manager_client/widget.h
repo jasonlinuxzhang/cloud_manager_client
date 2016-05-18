@@ -11,6 +11,7 @@
 #include <QJsonObject>
 #include <QStringList>
 #include <QtNetwork>
+#include <QIcon>
 #include "common.h"
 
 namespace Ui {
@@ -24,13 +25,13 @@ class Widget : public QWidget
 public:
     explicit Widget(QWidget *parent = 0);
     ~Widget();
-
-public:
+    QByteArray responseMessage;
     QString  &buildJsonString(messageType mesType, requestType reqType, QJsonObject& param);
+    QString  &buildJsonString(messageType mesType, requestType reqType, QJsonArray &param);
     QString  &buildJsonString(messageType mesType, requestType reqType);
-    void sendRequestToServer(QString &request); /*request is json format string*/
     void connectToServer();
-
+    void handleResponse();
+    void fetch_vm_list(QJsonObject &);
 
 private slots:
     void on_pushButtonStart_clicked();
