@@ -17,6 +17,9 @@ public:
 
 private:
     Ui::detail *ui;
+
+public:
+    void xmlWrite(const QString &, int );
 };
 
 #endif // DETAIL_H

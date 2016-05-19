@@ -2,6 +2,7 @@
 #include "ui_widget.h"
 #include <QDebug>
 #include <QMessageBox>
+#include "definedetail.h"
 
 Widget::Widget(QWidget *parent) :
     QWidget(parent),
@@ -15,6 +16,10 @@ Widget::Widget(QWidget *parent) :
     connect(tcpSocket, SIGNAL(readyRead()), this, SLOT(readMessage()));
     connect(tcpSocket,SIGNAL(error(QAbstractSocket::SocketError)),
              this,SLOT(displayError(QAbstractSocket::SocketError)));
+
+    vmImage = QIcon(":images/computer.jpg");
+
+    on_pushButtonFetch_clicked();
 }
 
 Widget::~Widget()
@@ -124,9 +129,21 @@ void Widget::on_pushButtonDestroy_clicked()
     tcpSocket->write(message.toLatin1().data(), message.size());
 }
 
+void Widget::defineDetailRecv(const QString &str)
+{
+    QString message(QString::number(str.size(), 10) + str);
+    tcpSocket->abort();
+    tcpSocket->connectToHost(QString(SERVER_ADDRESS), SERVER_PORT);
+    qDebug()<<QString(SERVER_ADDRESS)<<":"<<SERVER_PORT<<endl;
+    qDebug()<<message<<endl;
+    tcpSocket->write(message.toLatin1().data(), message.size());
+}
+
 void Widget::on_pushButtonDefine_clicked()
 {
-
+    defineObject = new defineDetail();
+    connect(defineObject, SIGNAL(infoSend(const QString &)), this, SLOT(defineDetailRecv(const QString &)));
+    defineObject->show();
 }
 
 void Widget::on_pushButtonUndefine_clicked()
@@ -134,15 +151,7 @@ void Widget::on_pushButtonUndefine_clicked()
 
 }
 
-void Widget::on_listWidgetActive_doubleClicked(const QModelIndex &index)
-{
 
-}
-
-void Widget::on_listWidgetInActive_doubleClicked(const QModelIndex &index)
-{
-
-}
 
 void Widget::on_pushButtonFetch_clicked()
 {
@@ -174,6 +183,8 @@ void Widget::displayError(QAbstractSocket::SocketError)
     qDebug()<<tcpSocket->errorString();
 }
 
+
+
 void Widget::fetch_vm_list(QJsonObject& jsonObject)
 {
     if(!jsonObject.contains("Operation_Result"))
@@ -201,7 +212,9 @@ void Widget::fetch_vm_list(QJsonObject& jsonObject)
         int count = activeVmArray.count();
         for(int i = 0; i < count; i++)
         {
-            ui->listWidgetActive->addItem(activeVmArray.at(i).toString());
+            QListWidgetItem *itemVm = new QListWidgetItem(vmImage, activeVmArray.at(i).toString(), NULL, NULL);
+          //  ui->listWidgetActive->addItem(activeVmArray.at(i).toString());
+            ui->listWidgetActive->addItem(itemVm);
         }
     }
 
@@ -212,9 +225,49 @@ void Widget::fetch_vm_list(QJsonObject& jsonObject)
         int count = inactiveVmArray.count();
         for(int i = 0; i < count; i++)
         {
-            ui->listWidgetInActive->addItem(inactiveVmArray.at(i).toString());
+         //   ui->listWidgetInActive->addItem(inactiveVmArray.at(i).toString());
+            QListWidgetItem *itemVm = new QListWidgetItem(vmImage, inactiveVmArray.at(i).toString(), NULL, NULL);
+            ui->listWidgetInActive->addItem(itemVm);
         }
     }
+}
+
+void Widget::write_detail(QJsonObject &jsonObject)
+{
+    if(!jsonObject.contains("Operation_Result"))
+    {
+            return;
+    }
+    QJsonValue operationValue = jsonObject.take("Operation_Result");
+    if(!operationValue.isObject())
+    {
+        return;
+    }
+    QJsonObject operationObject = operationValue.toObject();
+    if(!operationObject.contains("Xml"))
+    {
+        return ;
+    }
+    QJsonValue xmlObject = operationObject.take("Xml");
+    if(!xmlObject.isString())
+    {
+        return;
+    }
+
+    if(!operationObject.contains("Port"))
+    {
+        return;
+    }
+    QJsonValue vmPort = operationObject.take("Port");
+    if(!vmPort.isDouble())
+    {
+        return ;
+    }
+
+    vmDetail = new detail();
+    vmDetail->show();
+    vmDetail->xmlWrite(xmlObject.toString(), vmPort.toInt());
+
 }
 
 void Widget::handleResponse()
@@ -246,6 +299,7 @@ void Widget::handleResponse()
                         switch(requestType.toInt())
                         {
                             case 2:fetch_vm_list(json_object);
+                            case 5:write_detail(json_object);
                         }
                     }
                 }
@@ -256,6 +310,34 @@ void Widget::handleResponse()
 }
 
 
+void Widget::on_listWidgetActive_itemDoubleClicked(QListWidgetItem *item)
+{
+    QString vmName = item->text();
+    QJsonObject vmNameObject;
+    vmNameObject.insert("Name", vmName);
 
+    QString jsonString = buildJsonString(REQUEST, SHOW_DETAIL, vmNameObject);
+    QString message(QString::number(jsonString.size(), 10) + jsonString);
 
+    tcpSocket->abort();
+    tcpSocket->connectToHost(QString(SERVER_ADDRESS), SERVER_PORT);
+    qDebug()<<QString(SERVER_ADDRESS)<<":"<<SERVER_PORT<<endl;
+    qDebug()<<message<<endl;
+    tcpSocket->write(message.toLatin1().data(), message.size());
+}
 
+void Widget::on_listWidgetInActive_itemDoubleClicked(QListWidgetItem *item)
+{
+    QString vmName = item->text();
+    QJsonObject vmNameObject;
+    vmNameObject.insert("Name", vmName);
+
+    QString jsonString = buildJsonString(REQUEST, SHOW_DETAIL, vmNameObject);
+    QString message(QString::number(jsonString.size(), 10) + jsonString);
+
+    tcpSocket->abort();
+    tcpSocket->connectToHost(QString(SERVER_ADDRESS), SERVER_PORT);
+    qDebug()<<QString(SERVER_ADDRESS)<<":"<<SERVER_PORT<<endl;
+    qDebug()<<message<<endl;
+    tcpSocket->write(message.toLatin1().data(), message.size());
+}

@@ -16,6 +16,8 @@ typedef enum _requestType{
     SHUTDOWN_VM,
     FETCH,
     DESTROY_VM,
+    DEFINE_VM,
+    SHOW_DETAIL,
 
 }requestType;
 

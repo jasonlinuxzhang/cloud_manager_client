@@ -12,3 +12,12 @@ detail::~detail()
 {
     delete ui;
 }
+
+void detail::xmlWrite(const QString &xml, int port)
+{
+    ui->textEditVmDetail->setPlainText(xml);
+    QString portMessage = "Port:" + QString("%1").arg(port);
+    ui->textEditVmDetail->append(portMessage);
+}
+
+

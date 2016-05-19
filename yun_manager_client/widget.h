@@ -1,6 +1,7 @@
 #ifndef WIDGET_H
 #define WIDGET_H
 
+#include "definedetail.h"
 #include <QWidget>
 #include <QtCore>
 #include <QString>
@@ -12,11 +13,16 @@
 #include <QStringList>
 #include <QtNetwork>
 #include <QIcon>
+#include <QListWidgetItem>
 #include "common.h"
+#include "detail.h"
+
 
 namespace Ui {
 class Widget;
 }
+
+
 
 class Widget : public QWidget
 {
@@ -32,6 +38,7 @@ public:
     void connectToServer();
     void handleResponse();
     void fetch_vm_list(QJsonObject &);
+    void write_detail(QJsonObject &);
 
 private slots:
     void on_pushButtonStart_clicked();
@@ -46,19 +53,26 @@ private slots:
 
 
 
-    void on_listWidgetActive_doubleClicked(const QModelIndex &index);
-
-    void on_listWidgetInActive_doubleClicked(const QModelIndex &index);
-
     void on_pushButtonFetch_clicked();
 
     void readMessage();
 
     void displayError(QAbstractSocket::SocketError);
 
+    void on_listWidgetActive_itemDoubleClicked(QListWidgetItem *item);
+
+    void on_listWidgetInActive_itemDoubleClicked(QListWidgetItem *item);
+
 private:
     Ui::Widget *ui;
     QTcpSocket *tcpSocket;
+    defineDetail *defineObject;
+    detail *vmDetail;
+
+    QIcon vmImage;
+public slots:
+    void defineDetailRecv(const QString &);
+
 
 };
 
