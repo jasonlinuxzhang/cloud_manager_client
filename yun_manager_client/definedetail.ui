@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>270</width>
+    <width>295</width>
     <height>132</height>
    </rect>
   </property>
@@ -62,7 +62,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>CPU</string>
+    <string>CPU)</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_6">
@@ -121,7 +121,7 @@
   <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
-     <x>10</x>
+     <x>0</x>
      <y>60</y>
      <width>31</width>
      <height>18</height>
@@ -134,11 +134,49 @@
   <widget class="QLineEdit" name="lineEditMac">
    <property name="geometry">
     <rect>
-     <x>40</x>
+     <x>30</x>
      <y>50</y>
      <width>113</width>
      <height>26</height>
     </rect>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="comboBoxSystem">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>50</y>
+     <width>72</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>Win7 64</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Ubuntu 64</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Centos7.0 64</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>50</y>
+     <width>41</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>System</string>
    </property>
   </widget>
  </widget>

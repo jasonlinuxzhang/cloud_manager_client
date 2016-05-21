@@ -19,6 +19,8 @@ Widget::Widget(QWidget *parent) :
 
     vmImage = QIcon(":images/computer.jpg");
 
+    defineObject = NULL;
+
     on_pushButtonFetch_clicked();
 }
 
@@ -134,21 +136,44 @@ void Widget::defineDetailRecv(const QString &str)
     QString message(QString::number(str.size(), 10) + str);
     tcpSocket->abort();
     tcpSocket->connectToHost(QString(SERVER_ADDRESS), SERVER_PORT);
-    qDebug()<<QString(SERVER_ADDRESS)<<":"<<SERVER_PORT<<endl;
-    qDebug()<<message<<endl;
-    tcpSocket->write(message.toLatin1().data(), message.size());
+  //  qDebug()<<QString(SERVER_ADDRESS)<<":"<<SERVER_PORT<<endl;
+  //  qDebug()<<message<<endl;
+   tcpSocket->write(message.toLatin1().data(), message.size());
 }
 
 void Widget::on_pushButtonDefine_clicked()
 {
     defineObject = new defineDetail();
+
     connect(defineObject, SIGNAL(infoSend(const QString &)), this, SLOT(defineDetailRecv(const QString &)));
     defineObject->show();
 }
 
 void Widget::on_pushButtonUndefine_clicked()
 {
+    QList<QListWidgetItem *> itemList = ui->listWidgetInActive->selectedItems();
+    int nCount = itemList.count();
+    if(nCount < 1)
+    {
+        QMessageBox::information(this, tr("Error"), tr("Please select inactive vm"));
+        return;
+    }
 
+    QJsonArray vmArray;
+    for(int i = 0; i < nCount; i++)
+    {
+        qDebug()<<itemList[i]->text();
+        vmArray.insert(i, itemList[i]->text());
+    }
+
+    QString jsonString = buildJsonString(REQUEST, UNDEFINE_VM, vmArray);
+    qDebug()<<jsonString;
+    QString message(QString::number(jsonString.size(), 10) + jsonString);
+    tcpSocket->abort();
+    tcpSocket->connectToHost(QString(SERVER_ADDRESS), SERVER_PORT);
+    qDebug()<<QString(SERVER_ADDRESS)<<":"<<SERVER_PORT<<endl;
+    qDebug()<<message<<endl;
+    tcpSocket->write(message.toLatin1().data(), message.size());
 }
 
 
@@ -264,6 +289,10 @@ void Widget::write_detail(QJsonObject &jsonObject)
         return ;
     }
 
+    if(NULL != vmDetail)
+    {
+        vmDetail->close();
+    }
     vmDetail = new detail();
     vmDetail->show();
     vmDetail->xmlWrite(xmlObject.toString(), vmPort.toInt());
@@ -298,8 +327,8 @@ void Widget::handleResponse()
                         }
                         switch(requestType.toInt())
                         {
-                            case 2:fetch_vm_list(json_object);
-                            case 5:write_detail(json_object);
+                        case 2:fetch_vm_list(json_object);if(NULL != defineObject){defineObject->close();}break;
+                        case 5:write_detail(json_object); break;
                         }
                     }
                 }

@@ -18,6 +18,7 @@ typedef enum _requestType{
     DESTROY_VM,
     DEFINE_VM,
     SHOW_DETAIL,
+    UNDEFINE_VM,
 
 }requestType;
 
