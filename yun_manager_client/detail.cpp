@@ -6,6 +6,7 @@ detail::detail(QWidget *parent) :
     ui(new Ui::detail)
 {
     ui->setupUi(this);
+    ui->textEditVmDetail->setWordWrapMode(QTextOption::NoWrap);
 }
 
 detail::~detail()
@@ -21,3 +22,8 @@ void detail::xmlWrite(const QString &xml, int port)
 }
 
 
+
+void detail::on_pushButton_clicked()
+{
+
+}

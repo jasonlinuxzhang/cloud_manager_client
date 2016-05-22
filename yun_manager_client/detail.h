@@ -20,6 +20,8 @@ private:
 
 public:
     void xmlWrite(const QString &, int );
+private slots:
+    void on_pushButton_clicked();
 };
 
 #endif // DETAIL_H

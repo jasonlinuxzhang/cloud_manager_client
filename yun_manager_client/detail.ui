@@ -6,164 +6,156 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>478</width>
-    <height>426</height>
+    <width>503</width>
+    <height>334</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QTextEdit" name="textEditVmDetail">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>30</y>
-     <width>211</width>
-     <height>311</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>10</y>
-     <width>54</width>
-     <height>18</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>VmDetail</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit_2">
-   <property name="geometry">
-    <rect>
-     <x>300</x>
-     <y>60</y>
-     <width>113</width>
-     <height>26</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit_3">
-   <property name="geometry">
-    <rect>
-     <x>300</x>
-     <y>100</y>
-     <width>113</width>
-     <height>26</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit_4">
-   <property name="geometry">
-    <rect>
-     <x>300</x>
-     <y>140</y>
-     <width>113</width>
-     <height>26</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_2">
-   <property name="geometry">
-    <rect>
-     <x>240</x>
-     <y>30</y>
-     <width>54</width>
-     <height>18</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Storage</string>
-   </property>
-  </widget>
-  <widget class="QSpinBox" name="spinBox">
-   <property name="geometry">
-    <rect>
-     <x>300</x>
-     <y>20</y>
-     <width>44</width>
-     <height>27</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_3">
-   <property name="geometry">
-    <rect>
-     <x>240</x>
-     <y>60</y>
-     <width>54</width>
-     <height>18</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>NetWork</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_4">
-   <property name="geometry">
-    <rect>
-     <x>240</x>
-     <y>100</y>
-     <width>54</width>
-     <height>18</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>CPU</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_5">
-   <property name="geometry">
-    <rect>
-     <x>240</x>
-     <y>140</y>
-     <width>54</width>
-     <height>18</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Mem</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_6">
-   <property name="geometry">
-    <rect>
-     <x>240</x>
-     <y>180</y>
-     <width>54</width>
-     <height>18</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>CDROM</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit">
-   <property name="geometry">
-    <rect>
-     <x>300</x>
-     <y>180</y>
-     <width>113</width>
-     <height>26</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton">
-   <property name="geometry">
-    <rect>
-     <x>300</x>
-     <y>230</y>
-     <width>80</width>
-     <height>26</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>App</string>
-   </property>
-  </widget>
+  <layout class="QHBoxLayout" name="horizontalLayout_7">
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Virtual Machine Detail Configure</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QTextEdit" name="textEditVmDetail"/>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_6">
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>13</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QLabel" name="label_2">
+           <property name="text">
+            <string>Storage(G)</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSpinBox" name="spinBoxStorage"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <widget class="QLabel" name="label_3">
+           <property name="text">
+            <string>NetWork</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEditNetWork"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <item>
+          <widget class="QLabel" name="label_4">
+           <property name="text">
+            <string>CPU</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSpinBox" name="spinBoxCpu"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_4">
+         <item>
+          <widget class="QLabel" name="label_5">
+           <property name="text">
+            <string>Mem(X512M)</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSpinBox" name="spinBoxMemory"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_5">
+         <item>
+          <widget class="QLabel" name="label_6">
+           <property name="text">
+            <string>CDROM</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="comboBoxCdrom">
+           <item>
+            <property name="text">
+             <string>Win7 64</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Ubuntu 64</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Centos7.0 64</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton">
+         <property name="text">
+          <string>Set</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
  </widget>
  <resources/>
  <connections/>

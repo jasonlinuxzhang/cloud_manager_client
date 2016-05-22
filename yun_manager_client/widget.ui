@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>536</width>
-    <height>305</height>
+    <width>638</width>
+    <height>371</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -40,14 +40,14 @@
      <item>
       <widget class="QPushButton" name="pushButtonDefine">
        <property name="text">
-        <string>Define</string>
+        <string>Create</string>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QPushButton" name="pushButtonUndefine">
        <property name="text">
-        <string>Undefine</string>
+        <string>Destroy</string>
        </property>
       </widget>
      </item>
@@ -59,13 +59,20 @@
       </widget>
      </item>
      <item>
+      <widget class="QPushButton" name="pushButtonHostMonitor">
+       <property name="text">
+        <string>HostMonitor</string>
+       </property>
+      </widget>
+     </item>
+     <item>
       <spacer name="horizontalSpacer">
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
        <property name="sizeHint" stdset="0">
         <size>
-         <width>40</width>
+         <width>13</width>
          <height>20</height>
         </size>
        </property>
@@ -74,9 +81,9 @@
     </layout>
    </item>
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
      <item>
-      <layout class="QVBoxLayout" name="verticalLayout_2">
+      <layout class="QVBoxLayout" name="verticalLayout">
        <item>
         <widget class="QLabel" name="label">
          <property name="text">
@@ -85,12 +92,26 @@
         </widget>
        </item>
        <item>
-        <widget class="QListWidget" name="listWidgetActive"/>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <widget class="QListWidget" name="listWidgetActive"/>
+         </item>
+         <item>
+          <widget class="QListWidget" name="listWidgetCpuUsage">
+           <property name="maximumSize">
+            <size>
+             <width>70</width>
+             <height>16777215</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </item>
       </layout>
      </item>
      <item>
-      <layout class="QVBoxLayout" name="verticalLayout">
+      <layout class="QVBoxLayout" name="verticalLayout_2">
        <item>
         <widget class="QLabel" name="label_2">
          <property name="text">
@@ -110,17 +131,6 @@
     </layout>
    </item>
   </layout>
-  <zorder>listWidgetActive</zorder>
-  <zorder>pushButtonStart</zorder>
-  <zorder>pushButtonShutdown</zorder>
-  <zorder>pushButtonDestroy</zorder>
-  <zorder>pushButtonUndefine</zorder>
-  <zorder>pushButtonDefine</zorder>
-  <zorder>listWidgetInActive</zorder>
-  <zorder>label</zorder>
-  <zorder>label_2</zorder>
-  <zorder>horizontalSpacer</zorder>
-  <zorder>listWidgetInActive</zorder>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>

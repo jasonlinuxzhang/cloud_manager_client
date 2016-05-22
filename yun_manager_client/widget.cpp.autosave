@@ -383,5 +383,5 @@ void Widget::getActiveVmList()
 
 void Widget::on_pushButtonHostMonitor_clicked()
 {
-
+    
 }

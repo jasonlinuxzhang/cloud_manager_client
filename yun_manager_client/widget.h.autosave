@@ -69,7 +69,7 @@ private slots:
 
 
     void on_pushButtonHostMonitor_clicked();
-
+    
 private:
     Ui::Widget *ui;
     QTcpSocket *tcpSocket;
