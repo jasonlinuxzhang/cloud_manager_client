@@ -17,15 +17,19 @@ Widget::Widget(QWidget *parent) :
     connect(tcpSocket,SIGNAL(error(QAbstractSocket::SocketError)),
              this,SLOT(displayError(QAbstractSocket::SocketError)));
 
-   // oneThread = new myThread();
-  //  connect(oneThread, SIGNAL(activeVmListSignal()), this, SLOT(getActiveVmList()));
-
     vmImage = QIcon(":images/computer.jpg");
-
     defineObject = NULL;
     vmDetail = NULL;
 
-   // oneThread.start();
+    anThread = new myThread();
+    connect(anThread, SIGNAL(monitorEnableSignal()), this, SLOT(readMonitorEnableRequest()));
+    connect(this, SIGNAL(monitorEnableSignal(bool)), anThread, SLOT(readMonitorEnableSlot(bool)));
+    connect(anThread, SIGNAL(updateHostInfoSignal(QJsonObject&)), this, SLOT(recvUpdateHostInfo(QJsonObject &)));
+
+    anThread->start();
+
+
+
     on_pushButtonFetch_clicked();
 }
 
@@ -199,8 +203,6 @@ void Widget::readMessage()
 {
     QDataStream in(tcpSocket);
     QString response;
-    if(tcpSocket->bytesAvailable() < (int)sizeof(quint16))
-        return;
     responseMessage = tcpSocket->readAll();
     qDebug()<<responseMessage;
     this->handleResponse();
@@ -299,6 +301,8 @@ void Widget::write_detail(QJsonObject &jsonObject)
         vmDetail->close();
     }
     vmDetail = new detail();
+    connect(vmDetail, SIGNAL(vmStatusSignal(QString &)), this, SLOT(receiveVmStatusRequest(QString &)));
+    connect(this, SIGNAL(vmStatusSignal(QString &, bool)), vmDetail, SLOT(receiveVmStatus(QString &, bool)));
     vmDetail->show();
     vmDetail->xmlWrite(xmlObject.toString(), vmPort.toInt());
 
@@ -333,7 +337,7 @@ void Widget::handleResponse()
                         switch(requestType.toInt())
                         {
                         case 2:fetch_vm_list(json_object);if(NULL != defineObject){defineObject->close();}break;
-                        case 5:write_detail(json_object); break;
+                        case 5:if(NULL != vmDetail){vmDetail->close();}write_detail(json_object); break;
                         }
                     }
                 }
@@ -376,12 +380,52 @@ void Widget::on_listWidgetInActive_itemDoubleClicked(QListWidgetItem *item)
     tcpSocket->write(message.toLatin1().data(), message.size());
 }
 
-void Widget::getActiveVmList()
+void Widget::readMonitorEnableRequest()
 {
-
+    emit monitorEnableSignal(true);
 }
 
-void Widget::on_pushButtonHostMonitor_clicked()
+void Widget::recvUpdateHostInfo(QJsonObject &hostInfo)
 {
-
+    qDebug()<<hostInfo;
+    if(hostInfo.contains("CpuRate"))
+    {
+        ui->lineEditHostCpu->setText("%" + QString::number(hostInfo.take("CpuRate").toInt(), 10));
+    }
+    if(hostInfo.contains("DiskTotal") && hostInfo.contains("DiskFree"))
+    {
+        QString diskString =QString(QString::number(hostInfo.take("DiskTotal").toInt(), 10) + "/" + QString::number(hostInfo.take("DiskFree").toInt(), 10));
+        ui->lineEditHostDisk->setText(diskString);
+    }
+    if(hostInfo.contains("MemoryTotal") && hostInfo.contains("MemoryFree"))
+    {
+        QString memString =QString(QString::number(hostInfo.take("MemoryTotal").toInt(), 10) + "/" + QString::number(hostInfo.take("MemoryFree").toInt(), 10));
+        ui->lineEditHostMemory->setText(memString);
+    }
 }
+
+void Widget::receiveVmStatusRequest(QString &vmName)
+{
+    uint16_t count = ui->listWidgetActive->count();
+    if(count <= 0)
+    {
+        emit vmStatusSignal(vmName, false);
+        return;
+    }
+    for(uint16_t i = 0; i < count; i++)
+    {
+        QListWidgetItem *theItem = ui->listWidgetActive->item(i);
+        if(theItem->text() == vmName)
+        {
+            emit vmStatusSignal(vmName, true);
+            return;
+        }
+    }
+    emit vmStatusSignal(vmName, false);
+}
+
+
+
+
+
+

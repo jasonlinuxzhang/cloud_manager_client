@@ -132,7 +132,7 @@
         </layout>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton">
+        <widget class="QPushButton" name="pushButtonSet">
          <property name="text">
           <string>Set</string>
          </property>

@@ -13,12 +13,13 @@ typedef enum _messageType{
 
 typedef enum _requestType{
     START_VM = 0,
-    SHUTDOWN_VM,
-    FETCH,
-    DESTROY_VM,
-    DEFINE_VM,
-    SHOW_DETAIL,
-    UNDEFINE_VM,
+    SHUTDOWN_VM,   //1
+    FETCH,          //2
+    DESTROY_VM,     //3
+    DEFINE_VM,      //4
+    SHOW_DETAIL,    //5
+    UNDEFINE_VM,    //6
+    MONITOR,        //7
 
 }requestType;
 

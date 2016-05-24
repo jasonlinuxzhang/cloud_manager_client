@@ -17,16 +17,14 @@ SOURCES += main.cpp\
     detail.cpp \
     definedetail.cpp \
     myinterface.cpp \
-    mythread.cpp \
-    hostmonitor.cpp
+    mythread.cpp
 
 HEADERS  += widget.h \
     detail.h \
     definedetail.h \
     myinterface.h \
     common.h \
-    mythread.h \
-    hostmonitor.h
+    mythread.h
 
 FORMS    += widget.ui \
     detail.ui \

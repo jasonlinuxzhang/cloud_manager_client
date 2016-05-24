@@ -13,15 +13,24 @@ class detail : public QWidget
 
 public:
     explicit detail(QWidget *parent = 0);
+
     ~detail();
 
 private:
     Ui::detail *ui;
+    bool isActive;
+    QString name;
 
 public:
     void xmlWrite(const QString &, int );
+
+signals:
+    void vmStatusSignal(QString &vmName);
+
 private slots:
-    void on_pushButton_clicked();
+    void on_pushButtonSet_clicked();
+    void receiveVmStatus(QString &vmName, bool status);
+
 };
 
 #endif // DETAIL_H

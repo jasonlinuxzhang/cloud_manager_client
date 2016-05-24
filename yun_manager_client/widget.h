@@ -64,23 +64,29 @@ private slots:
 
     void on_listWidgetInActive_itemDoubleClicked(QListWidgetItem *item);
 
-    void getActiveVmList();
+    void readMonitorEnableRequest();
 
+    void recvUpdateHostInfo(QJsonObject &hostInfo);
 
-
-    void on_pushButtonHostMonitor_clicked();
+    void receiveVmStatusRequest(QString &vmName);
 
 private:
     Ui::Widget *ui;
     QTcpSocket *tcpSocket;
     defineDetail *defineObject;
     detail *vmDetail;
-    myThread *oneThread;
-
     QIcon vmImage;
+    myThread *anThread;
+
 public slots:
     void defineDetailRecv(const QString &);
 
+signals:
+    void activeVmListResponseSignal(QString &);
+
+    void monitorEnableSignal(bool enable);
+
+    void vmStatusSignal(QString &vmName, bool status);
 
 };
 
