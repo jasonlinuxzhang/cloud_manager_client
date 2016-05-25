@@ -20,6 +20,7 @@ typedef enum _requestType{
     SHOW_DETAIL,    //5
     UNDEFINE_VM,    //6
     MONITOR,        //7
+    CHANGE,
 
 }requestType;
 

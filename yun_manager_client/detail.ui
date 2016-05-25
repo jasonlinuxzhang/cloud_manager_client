@@ -60,18 +60,7 @@
         </layout>
        </item>
        <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_2">
-         <item>
-          <widget class="QLabel" name="label_3">
-           <property name="text">
-            <string>NetWork</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLineEdit" name="lineEditNetWork"/>
-         </item>
-        </layout>
+        <layout class="QHBoxLayout" name="horizontalLayout_2"/>
        </item>
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout_3">
@@ -114,7 +103,12 @@
           <widget class="QComboBox" name="comboBoxCdrom">
            <item>
             <property name="text">
-             <string>Win7 64</string>
+             <string/>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Win7 32</string>
             </property>
            </item>
            <item>

@@ -973,6 +973,172 @@ moc_detail.cpp: /opt/Qt5.6.0/5.6/gcc_64/include/QtWidgets/QWidget \
 		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qfiledevice.h \
 		/opt/Qt5.6.0/5.6/gcc_64/include/QtGui/qvector2d.h \
 		/opt/Qt5.6.0/5.6/gcc_64/include/QtGui/qtouchdevice.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/QtCore \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/QtCoreDepends \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qabstractanimation.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qanimationgroup.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qparallelanimationgroup.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qpauseanimation.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qpropertyanimation.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qvariantanimation.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qeasingcurve.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qsequentialanimationgroup.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qtextcodec.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qendian.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qlibraryinfo.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qdatetime.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qbuffer.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qdir.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qfileinfo.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qdiriterator.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qfileselector.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/QObject \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/QStringList \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qfilesystemwatcher.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qlockfile.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qloggingcategory.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qprocess.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qresource.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qsavefile.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qsettings.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qstandardpaths.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qstorageinfo.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qtemporarydir.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/QScopedPointer \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qtemporaryfile.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qabstractitemmodel.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qabstractproxymodel.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qidentityproxymodel.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qitemselectionmodel.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qsortfilterproxymodel.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qstringlistmodel.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qjsonarray.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qjsonvalue.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qjsondocument.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qjsonobject.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qabstracteventdispatcher.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qeventloop.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qabstractnativeeventfilter.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qbasictimer.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qcoreapplication.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qmath.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qmetaobject.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qmimedata.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qobjectcleanuphandler.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qpointer.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qsharedmemory.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qsignalmapper.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qsocketnotifier.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qsystemsemaphore.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qtimer.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qtranslator.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qwineventnotifier.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qmimedatabase.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qmimetype.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qfactoryinterface.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qlibrary.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qplugin.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qpluginloader.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/quuid.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qabstractstate.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qabstracttransition.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qeventtransition.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qfinalstate.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qhistorystate.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qsignaltransition.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qstate.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qstatemachine.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qexception.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qfuture.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qfutureinterface.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qrunnable.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qresultstore.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qfuturesynchronizer.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qfuturewatcher.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qreadwritelock.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qsemaphore.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qthread.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qthreadpool.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qthreadstorage.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qwaitcondition.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qarraydataops.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qarraydatapointer.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qbitarray.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qbytearraymatcher.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qcache.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qcollator.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qcommandlineoption.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qcommandlineparser.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qcryptographichash.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qelapsedtimer.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qlinkedlist.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qmessageauthenticationcode.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qqueue.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qregularexpression.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qscopedvaluerollback.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qstack.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qtextboundaryfinder.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qtimeline.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qtimezone.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qversionnumber.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qxmlstream.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qtcoreversion.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/QString \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/QJsonDocument \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/QJsonArray \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/QJsonValue \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/QJsonParseError \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/QJsonObject \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/QtNetwork \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/QtNetworkDepends \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/qabstractnetworkcache.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/qnetworkrequest.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/QSharedDataPointer \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/QUrl \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/QVariant \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/qhttpmultipart.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/QByteArray \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/QIODevice \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/QNetworkRequest \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/qnetworkaccessmanager.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/QSslConfiguration \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/qsslconfiguration.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/qsslsocket.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/qtcpsocket.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/qabstractsocket.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/qsslerror.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/qsslcertificate.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/qssl.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/QFlags \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/QSslPreSharedKeyAuthenticator \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/qsslpresharedkeyauthenticator.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/QtGlobal \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/QMetaType \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/qnetworkcookie.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/QList \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/qnetworkcookiejar.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/qnetworkdiskcache.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/qnetworkreply.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/QNetworkAccessManager \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/qnetworkconfigmanager.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/qnetworkconfiguration.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/qnetworksession.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/qnetworkinterface.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/qhostaddress.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/qauthenticator.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/qdnslookup.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/qhostinfo.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/qnetworkproxy.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/qlocalserver.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/qlocalsocket.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/qtcpserver.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/qudpsocket.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/qsslcertificateextension.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/qsslcipher.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/qsslellipticcurve.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/QHash \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/qsslkey.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/qtnetworkversion.h \
 		detail.h
 	/opt/Qt5.6.0/5.6/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.6.0/5.6/gcc_64/mkspecs/linux-g++ -I/home/project/yun_manager_client/yun_manager_client -I/opt/Qt5.6.0/5.6/gcc_64/include -I/opt/Qt5.6.0/5.6/gcc_64/include/QtWidgets -I/opt/Qt5.6.0/5.6/gcc_64/include/QtGui -I/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork -I/opt/Qt5.6.0/5.6/gcc_64/include/QtCore detail.h -o moc_detail.cpp
 
@@ -2261,16 +2427,179 @@ detail.o: detail.cpp detail.h \
 		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qfiledevice.h \
 		/opt/Qt5.6.0/5.6/gcc_64/include/QtGui/qvector2d.h \
 		/opt/Qt5.6.0/5.6/gcc_64/include/QtGui/qtouchdevice.h \
-		ui_detail.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/QtCore \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/QtCoreDepends \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qabstractanimation.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qanimationgroup.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qparallelanimationgroup.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qpauseanimation.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qpropertyanimation.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qvariantanimation.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qeasingcurve.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qsequentialanimationgroup.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qtextcodec.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qendian.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qlibraryinfo.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qdatetime.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qbuffer.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qdir.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qfileinfo.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qdiriterator.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qfileselector.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/QObject \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/QStringList \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qfilesystemwatcher.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qlockfile.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qloggingcategory.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qprocess.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qresource.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qsavefile.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qsettings.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qstandardpaths.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qstorageinfo.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qtemporarydir.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/QScopedPointer \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qtemporaryfile.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qabstractitemmodel.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qabstractproxymodel.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qidentityproxymodel.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qitemselectionmodel.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qsortfilterproxymodel.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qstringlistmodel.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qjsonarray.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qjsonvalue.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qjsondocument.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qjsonobject.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qabstracteventdispatcher.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qeventloop.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qabstractnativeeventfilter.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qbasictimer.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qcoreapplication.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qmath.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qmetaobject.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qmimedata.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qobjectcleanuphandler.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qpointer.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qsharedmemory.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qsignalmapper.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qsocketnotifier.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qsystemsemaphore.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qtimer.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qtranslator.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qwineventnotifier.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qmimedatabase.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qmimetype.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qfactoryinterface.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qlibrary.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qplugin.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qpluginloader.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/quuid.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qabstractstate.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qabstracttransition.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qeventtransition.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qfinalstate.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qhistorystate.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qsignaltransition.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qstate.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qstatemachine.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qexception.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qfuture.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qfutureinterface.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qrunnable.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qresultstore.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qfuturesynchronizer.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qfuturewatcher.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qreadwritelock.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qsemaphore.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qthread.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qthreadpool.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qthreadstorage.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qwaitcondition.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qarraydataops.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qarraydatapointer.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qbitarray.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qbytearraymatcher.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qcache.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qcollator.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qcommandlineoption.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qcommandlineparser.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qcryptographichash.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qelapsedtimer.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qlinkedlist.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qmessageauthenticationcode.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qqueue.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qregularexpression.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qscopedvaluerollback.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qstack.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qtextboundaryfinder.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qtimeline.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qtimezone.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qversionnumber.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qxmlstream.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qtcoreversion.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/QString \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/QJsonDocument \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/QJsonArray \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/QJsonValue \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/QJsonParseError \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/QJsonObject \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/QtNetwork \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/QtNetworkDepends \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/qabstractnetworkcache.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/qnetworkrequest.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/QSharedDataPointer \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/QUrl \
 		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/QVariant \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/qhttpmultipart.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/QByteArray \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/QIODevice \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/QNetworkRequest \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/qnetworkaccessmanager.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/QSslConfiguration \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/qsslconfiguration.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/qsslsocket.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/qtcpsocket.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/qabstractsocket.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/qsslerror.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/qsslcertificate.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/qssl.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/QFlags \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/QSslPreSharedKeyAuthenticator \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/qsslpresharedkeyauthenticator.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/QtGlobal \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/QMetaType \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/qnetworkcookie.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/QList \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/qnetworkcookiejar.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/qnetworkdiskcache.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/qnetworkreply.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/QNetworkAccessManager \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/qnetworkconfigmanager.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/qnetworkconfiguration.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/qnetworksession.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/qnetworkinterface.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/qhostaddress.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/qauthenticator.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/qdnslookup.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/qhostinfo.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/qnetworkproxy.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/qlocalserver.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/qlocalsocket.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/qtcpserver.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/qudpsocket.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/qsslcertificateextension.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/qsslcipher.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/qsslellipticcurve.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/QHash \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/qsslkey.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtNetwork/qtnetworkversion.h \
+		ui_detail.h \
 		/opt/Qt5.6.0/5.6/gcc_64/include/QtWidgets/QAction \
 		/opt/Qt5.6.0/5.6/gcc_64/include/QtWidgets/qaction.h \
 		/opt/Qt5.6.0/5.6/gcc_64/include/QtGui/qicon.h \
 		/opt/Qt5.6.0/5.6/gcc_64/include/QtWidgets/qactiongroup.h \
 		/opt/Qt5.6.0/5.6/gcc_64/include/QtWidgets/QApplication \
 		/opt/Qt5.6.0/5.6/gcc_64/include/QtWidgets/qapplication.h \
-		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qcoreapplication.h \
-		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qeventloop.h \
 		/opt/Qt5.6.0/5.6/gcc_64/include/QtWidgets/qdesktopwidget.h \
 		/opt/Qt5.6.0/5.6/gcc_64/include/QtGui/qguiapplication.h \
 		/opt/Qt5.6.0/5.6/gcc_64/include/QtGui/qinputmethod.h \
@@ -2282,7 +2611,6 @@ detail.o: detail.cpp detail.h \
 		/opt/Qt5.6.0/5.6/gcc_64/include/QtWidgets/qstyleoption.h \
 		/opt/Qt5.6.0/5.6/gcc_64/include/QtWidgets/qabstractspinbox.h \
 		/opt/Qt5.6.0/5.6/gcc_64/include/QtGui/qvalidator.h \
-		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qregularexpression.h \
 		/opt/Qt5.6.0/5.6/gcc_64/include/QtWidgets/qslider.h \
 		/opt/Qt5.6.0/5.6/gcc_64/include/QtWidgets/qabstractslider.h \
 		/opt/Qt5.6.0/5.6/gcc_64/include/QtWidgets/qstyle.h \
@@ -2290,7 +2618,6 @@ detail.o: detail.cpp detail.h \
 		/opt/Qt5.6.0/5.6/gcc_64/include/QtWidgets/qtabwidget.h \
 		/opt/Qt5.6.0/5.6/gcc_64/include/QtWidgets/qrubberband.h \
 		/opt/Qt5.6.0/5.6/gcc_64/include/QtWidgets/qframe.h \
-		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qabstractitemmodel.h \
 		/opt/Qt5.6.0/5.6/gcc_64/include/QtWidgets/QHBoxLayout \
 		/opt/Qt5.6.0/5.6/gcc_64/include/QtWidgets/qboxlayout.h \
 		/opt/Qt5.6.0/5.6/gcc_64/include/QtWidgets/qlayout.h \
@@ -2300,15 +2627,8 @@ detail.o: detail.cpp detail.h \
 		/opt/Qt5.6.0/5.6/gcc_64/include/QtWidgets/qheaderview.h \
 		/opt/Qt5.6.0/5.6/gcc_64/include/QtWidgets/qabstractitemview.h \
 		/opt/Qt5.6.0/5.6/gcc_64/include/QtWidgets/qabstractscrollarea.h \
-		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/qitemselectionmodel.h \
 		/opt/Qt5.6.0/5.6/gcc_64/include/QtWidgets/QLabel \
 		/opt/Qt5.6.0/5.6/gcc_64/include/QtWidgets/qlabel.h \
-		/opt/Qt5.6.0/5.6/gcc_64/include/QtWidgets/QLineEdit \
-		/opt/Qt5.6.0/5.6/gcc_64/include/QtWidgets/qlineedit.h \
-		/opt/Qt5.6.0/5.6/gcc_64/include/QtGui/qtextcursor.h \
-		/opt/Qt5.6.0/5.6/gcc_64/include/QtGui/qtextformat.h \
-		/opt/Qt5.6.0/5.6/gcc_64/include/QtGui/qpen.h \
-		/opt/Qt5.6.0/5.6/gcc_64/include/QtGui/qtextoption.h \
 		/opt/Qt5.6.0/5.6/gcc_64/include/QtWidgets/QPushButton \
 		/opt/Qt5.6.0/5.6/gcc_64/include/QtWidgets/qpushbutton.h \
 		/opt/Qt5.6.0/5.6/gcc_64/include/QtWidgets/qabstractbutton.h \
@@ -2318,11 +2638,18 @@ detail.o: detail.cpp detail.h \
 		/opt/Qt5.6.0/5.6/gcc_64/include/QtWidgets/QTextEdit \
 		/opt/Qt5.6.0/5.6/gcc_64/include/QtWidgets/qtextedit.h \
 		/opt/Qt5.6.0/5.6/gcc_64/include/QtGui/qtextdocument.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtGui/qtextoption.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtGui/qtextcursor.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtGui/qtextformat.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtGui/qpen.h \
 		/opt/Qt5.6.0/5.6/gcc_64/include/QtWidgets/QVBoxLayout \
 		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/QDebug \
 		/opt/Qt5.6.0/5.6/gcc_64/include/QtWidgets/QMessageBox \
 		/opt/Qt5.6.0/5.6/gcc_64/include/QtWidgets/qmessagebox.h \
-		/opt/Qt5.6.0/5.6/gcc_64/include/QtWidgets/qdialog.h
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtWidgets/qdialog.h \
+		/opt/Qt5.6.0/5.6/gcc_64/include/QtCore/QRegExp \
+		myinterface.h \
+		common.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o detail.o detail.cpp
 
 definedetail.o: definedetail.cpp definedetail.h \

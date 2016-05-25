@@ -101,7 +101,7 @@
       <widget class="QComboBox" name="comboBoxSystem">
        <item>
         <property name="text">
-         <string>Win7 64</string>
+         <string>Win7 32</string>
         </property>
        </item>
        <item>

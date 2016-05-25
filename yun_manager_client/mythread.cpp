@@ -17,7 +17,7 @@ void myThread::run()
     while(1)
     {
         emit monitorEnableSignal();
-        sleep(1);
+        sleep(20);
     }
 }
 
