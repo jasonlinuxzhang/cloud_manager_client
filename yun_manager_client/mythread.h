@@ -27,7 +27,7 @@ protected:
     void run();
 signals :
     void monitorEnableSignal();
-    void updateHostInfoSignal(QJsonObject  &hostInfo);
+    void updateHostVmInfoSignal(QJsonObject  &hostInfo);
 public slots:
 
     void readMonitorEnableSlot(bool);

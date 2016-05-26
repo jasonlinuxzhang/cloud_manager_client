@@ -17,7 +17,7 @@ void myThread::run()
     while(1)
     {
         emit monitorEnableSignal();
-        sleep(20);
+        sleep(1);
     }
 }
 
@@ -106,7 +106,7 @@ void myThread::writeDataToMain(QJsonObject &jsonObject)
     {
         return;
     }
-
+/*
     QJsonObject operationObject = operationObjectType.toObject();
     if(!operationObject.contains("HostInfo"))
     {
@@ -120,8 +120,9 @@ void myThread::writeDataToMain(QJsonObject &jsonObject)
     }
 
     QJsonObject hostInfoObject = hostInfoType.toObject();
-
-    updateHostInfoSignal(hostInfoObject);
+*/
+    QJsonObject infoObject = operationObjectType.toObject();
+    emit updateHostVmInfoSignal(infoObject);
 
 }
 

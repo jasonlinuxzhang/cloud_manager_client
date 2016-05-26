@@ -66,7 +66,7 @@ private slots:
 
     void readMonitorEnableRequest();
 
-    void recvUpdateHostInfo(QJsonObject &hostInfo);
+    void recvUpdateHostVmInfo(QJsonObject &hostInfo);
 
     void receiveVmStatusRequest(QString &vmName);
 

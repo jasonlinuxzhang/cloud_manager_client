@@ -24,7 +24,7 @@ Widget::Widget(QWidget *parent) :
     anThread = new myThread();
     connect(anThread, SIGNAL(monitorEnableSignal()), this, SLOT(readMonitorEnableRequest()));
     connect(this, SIGNAL(monitorEnableSignal(bool)), anThread, SLOT(readMonitorEnableSlot(bool)));
-    connect(anThread, SIGNAL(updateHostInfoSignal(QJsonObject&)), this, SLOT(recvUpdateHostInfo(QJsonObject &)));
+    connect(anThread, SIGNAL(updateHostVmInfoSignal(QJsonObject&)), this, SLOT(recvUpdateHostVmInfo(QJsonObject &)));
 
     anThread->start();
 
@@ -385,23 +385,47 @@ void Widget::readMonitorEnableRequest()
     emit monitorEnableSignal(true);
 }
 
-void Widget::recvUpdateHostInfo(QJsonObject &hostInfo)
+void Widget::recvUpdateHostVmInfo(QJsonObject &info)
 {
-    qDebug()<<hostInfo;
-    if(hostInfo.contains("CpuRate"))
+    qDebug()<<info;
+    QJsonValue hostInfoType = info.take("HostInfo");
+    if(hostInfoType.isObject())
     {
-        ui->lineEditHostCpu->setText("%" + QString::number(hostInfo.take("CpuRate").toInt(), 10));
+        QJsonObject hostInfo = hostInfoType.toObject();
+        if(hostInfo.contains("CpuRate"))
+        {
+            ui->lineEditHostCpu->setText(QString::number(hostInfo.take("CpuRate").toInt(), 10) + "%");
+        }
+        if(hostInfo.contains("DiskTotal") && hostInfo.contains("DiskFree"))
+        {
+            QString diskString =QString(QString::number(hostInfo.take("DiskTotal").toInt(), 10) + "M" +"/" + QString::number(hostInfo.take("DiskFree").toInt(), 10) + "M");
+            ui->lineEditHostDisk->setText(diskString);
+        }
+        if(hostInfo.contains("MemoryTotal") && hostInfo.contains("MemoryFree"))
+        {
+            QString memString =QString(QString::number(hostInfo.take("MemoryTotal").toInt(), 10) + "M" + "/" + QString::number(hostInfo.take("MemoryFree").toInt(), 10) + "M");
+            ui->lineEditHostMemory->setText(memString);
+        }
     }
-    if(hostInfo.contains("DiskTotal") && hostInfo.contains("DiskFree"))
+    QJsonValue vmInfoType = info.take("VmInfo");
+    if(vmInfoType.isArray())
     {
-        QString diskString =QString(QString::number(hostInfo.take("DiskTotal").toInt(), 10) + "/" + QString::number(hostInfo.take("DiskFree").toInt(), 10));
-        ui->lineEditHostDisk->setText(diskString);
+        QJsonArray vmInfo= vmInfoType.toArray();
+        this->ui->listWidgetCpuUsage->clear();
+        for(uint8_t i = 0; i < vmInfo.size(); i++)
+        {
+            QJsonValue oneVmInfoType = vmInfo.at(i);
+            QJsonObject oneVmInfo = oneVmInfoType.toObject();
+            QStringList name = oneVmInfo.keys();
+            QListWidgetItem *theItem =new QListWidgetItem(name[0], NULL, NULL);
+            qint32 cpu_used = oneVmInfo.take(name[0]).toInt();
+            qint8 row = ui->listWidgetActive->row(theItem);
+            QListWidgetItem *newItem = new QListWidgetItem(QString("%1").arg(cpu_used/100) + "." + QString("%1").arg(cpu_used%100) + "%", NULL, NULL);
+            ui->listWidgetCpuUsage->insertItem(row, newItem);
+
+        }
     }
-    if(hostInfo.contains("MemoryTotal") && hostInfo.contains("MemoryFree"))
-    {
-        QString memString =QString(QString::number(hostInfo.take("MemoryTotal").toInt(), 10) + "/" + QString::number(hostInfo.take("MemoryFree").toInt(), 10));
-        ui->lineEditHostMemory->setText(memString);
-    }
+
 }
 
 void Widget::receiveVmStatusRequest(QString &vmName)

@@ -101,17 +101,17 @@
       <widget class="QComboBox" name="comboBoxSystem">
        <item>
         <property name="text">
-         <string>Win7 32</string>
+         <string>Win7_32</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>Ubuntu 64</string>
+         <string>Ubuntu_64</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>Centos7.0 64</string>
+         <string>Centos7.0_64</string>
         </property>
        </item>
       </widget>

@@ -24,7 +24,7 @@ typedef enum _requestType{
 
 }requestType;
 
-
+#define mac_temp "52:54:00:fc:3a:b3"
 
 #endif // COMMON_H
 
