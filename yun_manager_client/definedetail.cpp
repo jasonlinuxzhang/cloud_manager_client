@@ -71,7 +71,6 @@ void defineDetail::emit_signal_send()
 
     Widget w;
     QString jsonString = w.buildJsonString(REQUEST, DEFINE_VM, defineVmDetail);
-    qDebug()<<jsonString;
     QString message(QString::number(jsonString.size(), 10) + jsonString);
 
     const QString sendMessage = jsonString;

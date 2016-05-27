@@ -92,8 +92,6 @@ void detail::on_pushButtonSet_clicked()
     QString message(QString::number(jsonString.size(), 10) + jsonString);
     tcpSocket->abort();
     tcpSocket->connectToHost(QString(SERVER_ADDRESS), SERVER_PORT);
-    qDebug()<<QString(SERVER_ADDRESS)<<":"<<SERVER_PORT<<endl;
-    qDebug()<<message<<endl;
     tcpSocket->write(message.toLatin1().data(), message.size());
 
 }
@@ -102,8 +100,6 @@ void detail::receiveVmStatus(QString &vmName, bool status)
 {
     name = vmName;
     isActive = status;
-
-    qDebug()<<name<<" "<<isActive;
 }
 
 void detail::readMessage()

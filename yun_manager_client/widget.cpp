@@ -93,17 +93,14 @@ void Widget::on_pushButtonStart_clicked()
     for(int i = 0; i < nCount; i++)
     {
        // ui->listWidgetInActive->row(itemList[i]);
-        qDebug()<<itemList[i]->text();
         vmArray.insert(i, itemList[i]->text());
     }
 
     QString jsonString = buildJsonString(REQUEST, START_VM, vmArray);
-    qDebug()<<jsonString;
     QString message(QString::number(jsonString.size(), 10) + jsonString);
     tcpSocket->abort();
     tcpSocket->connectToHost(QString(SERVER_ADDRESS), SERVER_PORT);
-    qDebug()<<QString(SERVER_ADDRESS)<<":"<<SERVER_PORT<<endl;
-    qDebug()<<message<<endl;
+
     tcpSocket->write(message.toLatin1().data(), message.size());
 }
 
@@ -126,17 +123,13 @@ void Widget::on_pushButtonDestroy_clicked()
     for(int i = 0; i < nCount; i++)
     {
        // ui->listWidgetInActive->row(itemList[i]);
-        qDebug()<<itemList[i]->text();
         vmArray.insert(i, itemList[i]->text());
     }
 
     QString jsonString = buildJsonString(REQUEST, DESTROY_VM, vmArray);
-    qDebug()<<jsonString;
     QString message(QString::number(jsonString.size(), 10) + jsonString);
     tcpSocket->abort();
     tcpSocket->connectToHost(QString(SERVER_ADDRESS), SERVER_PORT);
-    qDebug()<<QString(SERVER_ADDRESS)<<":"<<SERVER_PORT<<endl;
-    qDebug()<<message<<endl;
     tcpSocket->write(message.toLatin1().data(), message.size());
 }
 
@@ -171,17 +164,13 @@ void Widget::on_pushButtonUndefine_clicked()
     QJsonArray vmArray;
     for(int i = 0; i < nCount; i++)
     {
-        qDebug()<<itemList[i]->text();
         vmArray.insert(i, itemList[i]->text());
     }
 
     QString jsonString = buildJsonString(REQUEST, UNDEFINE_VM, vmArray);
-    qDebug()<<jsonString;
     QString message(QString::number(jsonString.size(), 10) + jsonString);
     tcpSocket->abort();
     tcpSocket->connectToHost(QString(SERVER_ADDRESS), SERVER_PORT);
-    qDebug()<<QString(SERVER_ADDRESS)<<":"<<SERVER_PORT<<endl;
-    qDebug()<<message<<endl;
     tcpSocket->write(message.toLatin1().data(), message.size());
 }
 
@@ -194,8 +183,6 @@ void Widget::on_pushButtonFetch_clicked()
 
     tcpSocket->abort();
     tcpSocket->connectToHost(QString(SERVER_ADDRESS), SERVER_PORT);
-    qDebug()<<QString(SERVER_ADDRESS)<<":"<<SERVER_PORT<<endl;
-    qDebug()<<message<<endl;
     tcpSocket->write(message.toLatin1().data(), message.size());
 }
 
@@ -204,7 +191,6 @@ void Widget::readMessage()
     QDataStream in(tcpSocket);
     QString response;
     responseMessage = tcpSocket->readAll();
-    qDebug()<<responseMessage;
     this->handleResponse();
 
 }
@@ -212,7 +198,6 @@ void Widget::readMessage()
 void Widget::displayError(QAbstractSocket::SocketError)
 {
     //QMessageBox::information(this, tr("Error"), tcpSocket->errorString());
-    qDebug()<<tcpSocket->errorString();
 }
 
 
@@ -359,8 +344,6 @@ void Widget::on_listWidgetActive_itemDoubleClicked(QListWidgetItem *item)
 
     tcpSocket->abort();
     tcpSocket->connectToHost(QString(SERVER_ADDRESS), SERVER_PORT);
-    qDebug()<<QString(SERVER_ADDRESS)<<":"<<SERVER_PORT<<endl;
-    qDebug()<<message<<endl;
     tcpSocket->write(message.toLatin1().data(), message.size());
 }
 
@@ -375,8 +358,6 @@ void Widget::on_listWidgetInActive_itemDoubleClicked(QListWidgetItem *item)
 
     tcpSocket->abort();
     tcpSocket->connectToHost(QString(SERVER_ADDRESS), SERVER_PORT);
-    qDebug()<<QString(SERVER_ADDRESS)<<":"<<SERVER_PORT<<endl;
-    qDebug()<<message<<endl;
     tcpSocket->write(message.toLatin1().data(), message.size());
 }
 
@@ -387,7 +368,6 @@ void Widget::readMonitorEnableRequest()
 
 void Widget::recvUpdateHostVmInfo(QJsonObject &info)
 {
-    qDebug()<<info;
     QJsonValue hostInfoType = info.take("HostInfo");
     if(hostInfoType.isObject())
     {

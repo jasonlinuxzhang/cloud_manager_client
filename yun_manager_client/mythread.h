@@ -18,7 +18,6 @@ class myThread : public QThread
 
 public:
     myThread();
-    void displayError(QAbstractSocket::SocketError);
     void handleResponse(const QString &responseMessage);
     void writeDataToMain(QJsonObject &);
     void sendMonitorRequest();
@@ -32,6 +31,7 @@ public slots:
 
     void readMonitorEnableSlot(bool);
     void readMessage();
+    void displayError(QAbstractSocket::SocketError);
 private:
     QTcpSocket *tcpSocket;
 
